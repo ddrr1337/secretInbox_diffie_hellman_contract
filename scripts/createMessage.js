@@ -24,7 +24,7 @@ async function main() {
 
   // **1. Alice y Bob tienen sus claves**
   const aliceSecret = BigInt(
-    "20327789992800515968685381850616334401621686271873813529686836254549785192947"
+    "0x2cf11f14b63723ddc8f7e869a3a9599450c2e9535effbdf9be5462d1e15829f3"
   );
 
   // Calcular la clave pública de Alice
@@ -32,7 +32,7 @@ async function main() {
 
   // Bob's Public Key (lo inventamos aquí para el ejemplo)
   const bobPublicKey = BigInt(
-    "5525407190700791873487945301761720323424142263261415277104406390392515361505"
+    "0x0c3745075e352bdfe306f6b7f640eca6834a22bb7d4ba6027cc85e82d4c27ae1"
   );
 
   // **2. Alice calcula la clave compartida usando Bob's Public Key**
@@ -59,8 +59,7 @@ async function main() {
     return { encrypted, iv: iv.toString("hex"), authTag };
   }
 
-  const message =
-    "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum";
+  const message = "This is a top secret message!";
   const encryptedMessage = encryptMessage(message, aesKey);
 
   console.log("Alice's Secret:", aliceSecret.toString());
