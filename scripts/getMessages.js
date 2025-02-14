@@ -19,17 +19,22 @@ async function main() {
     account
   );
 
-  const addUser = await secretInboxContract.registerRecipientPublicKey(
-    "5525407190700791873487945301761720323424142263261415277104406390392515361505"
+  const messages = await secretInboxContract.getMessages(
+    "0x26baAC08CB753303de111e904e19BaF91e6b5E4d"
   );
-
-  console.log("Tx:", addUser.hash);
-
-  await addUser.wait();
-
-  console.log(
-    "-------------------- ADD USER AND PUBLIC KEY COMPLETED -----------------------"
-  );
+  console.log("--------------------  MESSAGES  -----------------------");
+  console.log();
+  messages.map((item, index) => {
+    console.log(
+      `--------------------  MESSAGE ${index} -----------------------`
+    );
+    console.log("Sender:", item.sender);
+    console.log("Encrypted Message:", item.messageEncrypted);
+    console.log("Message IV:", item.messageIV._hex);
+    console.log("Message Auth Tag:", item.messageAuthTag._hex);
+    console.log("Senders Public key:", item.sendersKey._hex);
+    console.log("------------------------------------------------------");
+  });
 }
 
 main()

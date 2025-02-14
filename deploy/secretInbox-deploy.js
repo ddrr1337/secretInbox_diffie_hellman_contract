@@ -16,7 +16,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
 
   const constructorArgs = [];
 
-  const verifierDeploy = await deploy("Groth16Verifier", {
+  const secretInboxDeploy = await deploy("SecretInbox", {
     from: deployer,
     args: constructorArgs,
     log: true,
@@ -25,17 +25,17 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
   });
 
   console.log(
-    "----------------------- ZK VERIFIER DEPLOYED --------------------------"
+    "----------------------- SECRET INBOX DEPLOYED --------------------------"
   );
 
   const verifyContract = networkConfig[chainId].verify;
 
   if (verifyContract) {
-    await verify(verifierDeploy.address, constructorArgs, chainId);
+    await verify(secretInboxDeploy.address, constructorArgs, chainId);
     console.log(
       "----------------------- VERIFICATION COMPLETED --------------------------"
     );
   }
 };
 
-module.exports.tags = ["all", "verifier"];
+module.exports.tags = ["all", "secret"];

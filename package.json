@@ -1,18 +1,14 @@
 {
-  "name": "base_hardhat",
+  "name": "dillie_hellman",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {},
   "devDependencies": {
-    "@chainlink/contracts": "^1.1.1",
     "@nomicfoundation/hardhat-ethers": "^3.0.2",
     "@nomicfoundation/hardhat-verify": "^2.0.9",
     "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers",
     "@nomiclabs/hardhat-waffle": "^2.0.0",
-    "@openzeppelin/contracts": "^5.0.2",
-    "circomlib": "^2.0.5",
-    "circomlibjs": "^0.1.7",
     "dotenv": "^16.4.5",
     "ethereum-waffle": "^3.0.0",
     "ethers": "5.7",
@@ -29,7 +25,5 @@
     "snarkjs": "^0.7.5",
     "solidity-coverage": "0.7.18"
   },
-  "dependencies": {
-    "circom": "^0.5.46"
-  }
+  "dependencies": {}
 }
