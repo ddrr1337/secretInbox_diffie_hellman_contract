@@ -27,11 +27,11 @@ async function main() {
 
   // Generar secreto de Bob
   const bobSecret = generateRandomSecret(PRIME);
-  console.log("Bob's Secret:", bobSecret.toString());
+  console.log("Secret:", "0x" + bobSecret.toString(16));
 
   // Calcular la clave pública de Bob
   const bobPublicKey = modExp(GENERATOR, bobSecret, PRIME);
-  console.log("Bob's Public Key:", bobPublicKey.toString());
+  console.log("Public Key:", "0x" + bobPublicKey.toString(16));
 }
 
 main()

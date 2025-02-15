@@ -6,7 +6,7 @@ async function main() {
   const provider = new ethers.providers.JsonRpcProvider(
     process.env.ALCHEMY_RPC
   );
-  const account = getAccount("main", provider);
+  const account = getAccount("sec", provider);
   await getGasPrice();
 
   const secretInboxDeployment = await deployments.get("SecretInbox");
@@ -20,7 +20,7 @@ async function main() {
   );
 
   const addUser = await secretInboxContract.registerRecipientPublicKey(
-    "5525407190700791873487945301761720323424142263261415277104406390392515361505"
+    "0x27c49081f97dfacb974f404b7271af8bef7dfe7a0e62bc03ccabf92d3dc90431"
   );
 
   console.log("Tx:", addUser.hash);

@@ -13,6 +13,10 @@ SecretInbox is a Solidity smart contract that allows users to send and receive e
 
 ## How It Works
 
+## Basics of Dillie Hellman encryption
+
+![Dillie hellman](dillieh.jpg)
+
 1. **Key Exchange:**
    - Each user generates a private key and derives a public key using the contract's generator and prime field.
    - The public key is registered in the contract using `registerRecipientPublicKey()`.

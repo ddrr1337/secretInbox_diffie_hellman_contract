@@ -20,12 +20,10 @@ async function main() {
   );
 
   const getBobPublic = await secretInboxContract.recipientPublicKeys(
-    "0x26baAC08CB753303de111e904e19BaF91e6b5E4d"
+    "0xF0cfffB35BfADc51AaDdfBbe20fc7a4CBfB2feA8"
   );
 
-  console.log(
-    "-------------------- BOB PUBLIC KEY COMPLETED -----------------------"
-  );
+  console.log("-------------------- BOB PUBLIC KEY -----------------------");
 
   console.log(getBobPublic);
 }

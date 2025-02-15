@@ -24,7 +24,7 @@ async function main() {
 
   // **1. Alice y Bob tienen sus claves**
   const aliceSecret = BigInt(
-    "0x2cf11f14b63723ddc8f7e869a3a9599450c2e9535effbdf9be5462d1e15829f3"
+    "0x6e457c0fe37ec39dec99534e2941e0f2770dc2620d1ed686a43b572df651087"
   );
 
   // Calcular la clave pública de Alice
@@ -32,7 +32,7 @@ async function main() {
 
   // Bob's Public Key (lo inventamos aquí para el ejemplo)
   const bobPublicKey = BigInt(
-    "0x0c3745075e352bdfe306f6b7f640eca6834a22bb7d4ba6027cc85e82d4c27ae1"
+    "0x27c49081f97dfacb974f404b7271af8bef7dfe7a0e62bc03ccabf92d3dc90431"
   );
 
   // **2. Alice calcula la clave compartida usando Bob's Public Key**

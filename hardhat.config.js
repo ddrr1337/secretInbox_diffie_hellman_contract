@@ -5,6 +5,7 @@ require("hardhat-deploy");
 
 const SEPOLIA_RPC = process.env.ALCHEMY_RPC;
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
+const PRIVATE_KEY_2 = process.env.PRIVATE_KEY_2;
 const ETHERSCAN_TOKEN = process.env.ETHERSCAN_TOKEN;
 
 module.exports = {
@@ -42,7 +43,7 @@ module.exports = {
   networks: {
     sepolia: {
       url: SEPOLIA_RPC,
-      accounts: [PRIVATE_KEY],
+      accounts: [PRIVATE_KEY, PRIVATE_KEY_2],
       chainId: 11155111,
       blockConfirmations: 1,
       testnet: true,
