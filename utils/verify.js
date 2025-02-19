@@ -7,10 +7,9 @@ function sleep(ms) {
 async function verify(contractAddress, args, chainId) {
   console.log("Verifying Contract...", contractAddress);
 
-  // Agregar una espera de 10 segundos si el chainId es 11155111
   if (chainId === 11155111) {
     console.log("Chain ID is 11155111 (Sepolia), waiting for 20 seconds...");
-    await sleep(20000); // Espera 10 segundos
+    await sleep(20000);
   }
 
   try {
